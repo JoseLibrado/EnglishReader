@@ -9,7 +9,7 @@ const Dashboard = ( { children }:PropsWithChildren) => {
             style={{...styles.dashboardContainer}}
             showsVerticalScrollIndicator={false}
         >
-            { children}
+            { children }
         </ScrollView>
     );
 }
@@ -17,6 +17,9 @@ const Dashboard = ( { children }:PropsWithChildren) => {
 const  styles = StyleSheet.create({
     dashboardContainer: {
         flex: 1,
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        gap: 20,
         width: '90%',
         padding: 20,
     }
