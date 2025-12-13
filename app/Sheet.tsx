@@ -7,6 +7,7 @@ const Sheet = () => {
     return (
         <ScrollView
             showsVerticalScrollIndicator={false}
+            style={styles.sheetContainer}
         >
             <SheetReader />
         </ScrollView>
@@ -16,10 +17,7 @@ const Sheet = () => {
 const styles = StyleSheet.create({
     sheetContainer: {
         flex: 1,
-        width: '90%',
         padding: 20,
-        justifyContent: "center",
-        alignItems: "center",
         backgroundColor: "#414141ff"
     }
 });

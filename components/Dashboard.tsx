@@ -1,15 +1,18 @@
 import { PropsWithChildren } from "react";
-import { ScrollView, StyleSheet } from "react-native";
+import { ScrollView, StyleSheet, View } from "react-native";
 
 
 const Dashboard = ( { children }:PropsWithChildren) => {
 
     return(
         <ScrollView
-            style={{...styles.dashboardContainer}}
-            showsVerticalScrollIndicator={false}
+            showsVerticalScrollIndicator={true}
         >
-            { children }
+            <View
+            style={{...styles.dashboardContainer}}
+            >
+                { children }
+            </View>
         </ScrollView>
     );
 }
@@ -17,10 +20,10 @@ const Dashboard = ( { children }:PropsWithChildren) => {
 const  styles = StyleSheet.create({
     dashboardContainer: {
         flex: 1,
+        // justifyContent: 'space-around',
         flexDirection: 'row',
         flexWrap: 'wrap',
-        gap: 20,
-        width: '90%',
+        gap: 10,
         padding: 20,
     }
 });

@@ -12,15 +12,14 @@ export default function Index() {
     <View
       style={{
         flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
         backgroundColor: "#414141ff"
       }}
     >
       <Dashboard>
         <CardReading>
-          <ContentCard onPress={ () => navigation.navigate('Sheet' as never)}/>
+          <ContentCard onPress={ () => navigation.navigate('Sheet' as never)} title="Casual Day"/>
         </CardReading>
+        
       </Dashboard>
     </View>
   );
