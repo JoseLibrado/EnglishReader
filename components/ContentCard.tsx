@@ -9,7 +9,14 @@ type Props = {
 
 const ContentCard = ({ image, title, onPress }: Props) => {
 
-    const placeholderImage = require('@/assets/images/android-icon-foreground.png');
+    const localImages: any = {
+        '@/assets/images/id_1.png': require('@/assets/images/id_1.png'),
+        // Add more as needed
+    };
+
+    const placeholderImage = image && localImages[image]
+        ? localImages[image]
+        : require('@/assets/images/android-icon-foreground.png');
 
     const titleCard = title ?? 'Lorem Ipsum';
 
@@ -18,7 +25,7 @@ const ContentCard = ({ image, title, onPress }: Props) => {
             <View style={{ justifyContent: 'center', }}>
                 {/* Image container */}
                 <View style={styles.thumbnail}>
-                    <ImageViewer image={placeholderImage} imageSource={image} />
+                    <ImageViewer image={placeholderImage} />
                 </View>
             </View>
             <Text style={[styles.title, { fontSize: 15 }]}>{titleCard}</Text>

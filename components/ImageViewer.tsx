@@ -3,12 +3,11 @@ import { ImageSourcePropType, StyleSheet } from 'react-native';
 
 type Props = {
     image: ImageSourcePropType;
-    imageSource?: string
 }
 
-const ImageViewer = ( {image, imageSource}: Props) => {
+const ImageViewer = ( {image}: Props) => {
     
-    const thumbnail = imageSource ? {uri: imageSource} : image;
+    const thumbnail = image;
     
     return <Image source={thumbnail} style={[styles.imageContainer, styles.platformImageDimensions
 
