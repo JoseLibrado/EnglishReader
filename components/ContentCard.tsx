@@ -40,10 +40,10 @@ const styles = StyleSheet.create({
         justifyContent: 'space-around',
     },
     thumbnail: {
-        borderColor: 'gray',
+        // borderColor: 'gray',
     },
     title: {
-        color: 'black',
+        color: "#e2e2e2ff",
         fontWeight: 'bold',
         textAlign: 'center',
         verticalAlign: 'middle',

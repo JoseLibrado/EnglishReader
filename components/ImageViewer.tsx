@@ -1,5 +1,4 @@
-import { Image } from 'expo-image';
-import { ImageSourcePropType, StyleSheet } from 'react-native';
+import { Image, ImageSourcePropType, StyleSheet } from 'react-native';
 
 type Props = {
     image: ImageSourcePropType;
@@ -16,8 +15,8 @@ const ImageViewer = ( {image}: Props) => {
 
 const styles = StyleSheet.create({
     imageContainer: {
-        borderRadius: 18,
-        backgroundColor: 'black'
+        borderRadius: 10,
+        backgroundColor: 'black',
     },
     platformImageDimensions: {
         // Set both width and height explicitly for both platforms
